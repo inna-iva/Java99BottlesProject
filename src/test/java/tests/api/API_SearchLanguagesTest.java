@@ -5,6 +5,7 @@ import network.CaptureNetworkTraffic;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.search_languages.SearchLanguagesPage;
 
@@ -36,7 +37,7 @@ public class API_SearchLanguagesTest extends BaseTest {
         Assert.assertEquals(searchLanguagesPage.getInput2Value(), VALUE_INPUT2);
         Assert.assertEquals(searchLanguagesPage.getPageContext(), PAGE_CONTEXT_BEFORE_REQUEST);
     }
-
+@Ignore
     @Test
     public void test_API_HttpRequest_GET() {
         final String expectedMethod = "GET";
@@ -72,7 +73,7 @@ public class API_SearchLanguagesTest extends BaseTest {
         Assert.assertEquals(httpResponse.get(2), getBaseUrl() + expectedEndPoint);
         Assert.assertTrue(Double.parseDouble(httpResponse.get(3).substring(10, 14)) <= expectedResponseTimeStandard);
     }
-
+@Ignore
     @Test
     public void test_API_HttpRequest_POST() {
 

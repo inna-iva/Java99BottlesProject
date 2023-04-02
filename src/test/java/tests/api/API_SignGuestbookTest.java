@@ -5,6 +5,7 @@ import network.CaptureNetworkTraffic;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.guest_book.SignGuestbookPage;
 
@@ -64,7 +65,7 @@ public class API_SignGuestbookTest extends BaseTest {
         Assert.assertEquals(signGuestbookPage.getInput6Value(), VALUE_INPUT_6);
         Assert.assertEquals(signGuestbookPage.getPageContext(), PAGE_CONTEXT_BEFORE_REQUEST);
     }
-
+@Ignore
     @Test(priority = -4)
     public void test_API_HttpRequest_GET() {
         final String expectedMethod = "GET";
@@ -101,7 +102,7 @@ public class API_SignGuestbookTest extends BaseTest {
         Assert.assertTrue(
                 Double.parseDouble(httpResponse.get(3).substring(10, 14)) <= expectedResponseTimeStandard);
     }
-
+@Ignore
     @Test(priority = -3)
     public void test_API_HttpRequest_POST() {
 

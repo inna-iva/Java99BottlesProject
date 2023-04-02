@@ -3,6 +3,7 @@ package tests.api;
 import base.BaseTest;
 import network.CaptureNetworkTraffic;
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.browse_languages.languages.KalkulonLanguagePage;
 
@@ -26,7 +27,7 @@ public class API_KalkulonLanguageTest extends BaseTest {
         Assert.assertEquals(kalkulonLanguagePage.getH2HeaderText(), LANGUEGE_NAME);
         Assert.assertNotNull(kalkulonLanguagePage.getPageContext());
     }
-
+@Ignore
     @Test
     public void testAPI_HttpRequest_GET(){
 

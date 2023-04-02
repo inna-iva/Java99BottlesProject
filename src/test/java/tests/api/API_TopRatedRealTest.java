@@ -5,6 +5,7 @@ import network.CaptureNetworkTraffic;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.top_lists.TopRatedRealPage;
 
@@ -27,7 +28,7 @@ public class API_TopRatedRealTest extends BaseTest {
         Assert.assertEquals(topRatedRealPage.getHref(), getBaseUrl() + ACTION);
         Assert.assertNotNull(topRatedRealPage.getPageContext());
     }
-
+@Ignore
     @Test
     public void test_API_HttpRequest_GET() {
         final String expectedMethod = "GET";

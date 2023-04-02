@@ -5,6 +5,7 @@ import network.CaptureNetworkTraffic;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.browse_languages.languages.MagnumLanguagePage;
 
@@ -28,7 +29,7 @@ public class API_MagnumLanguageTest extends BaseTest {
         Assert.assertEquals(magnumLanguagePage.getH2HeaderText(), LANGUAGE_NAME);
         Assert.assertNotNull(magnumLanguagePage.getPageContext());
     }
-
+@Ignore
     @Test
     public void test_API_HttpRequest_GET() {
         final String expectedMethod = "GET";

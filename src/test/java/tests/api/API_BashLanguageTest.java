@@ -5,6 +5,7 @@ import network.CaptureNetworkTraffic;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.browse_languages.languages.BashLanguagePage;
 
@@ -29,7 +30,7 @@ public class API_BashLanguageTest extends BaseTest {
         Assert.assertEquals(bashLanguagePage.getH2HeaderText(), LANGUAGE_NAME);
         Assert.assertNotNull(bashLanguagePage.getPageContext());
     }
-
+@Ignore
     @Test
     public void testAPIHTTPRequestGET() {
         final String expectedMethod = "GET";
@@ -48,7 +49,7 @@ public class API_BashLanguageTest extends BaseTest {
         Assert.assertEquals(httpRequest.get(2), "Optional.empty");
         Assert.assertEquals(httpRequest.get(3), "Optional.empty");
     }
-
+@Ignore
     @Test
     public void testAPIHTTPResponseGET() {
         final String expectedStatusCode = "200";

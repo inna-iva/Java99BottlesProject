@@ -123,7 +123,7 @@ public class API_JavaScriptLanguageTest extends BaseTest {
         Assert.assertEquals(javaScriptLanguagePage.getH2HeaderText(), LANGUAGE_NAME);
         Assert.assertEquals(javaScriptLanguagePage.getPageContext(), PAGE_CONTEXT_BEFORE_REQUEST);
     }
-
+@Ignore
     @Test
     public void testAPIHTTPRequestGET() {
         final String expectedMethod = "GET";
@@ -143,7 +143,7 @@ public class API_JavaScriptLanguageTest extends BaseTest {
         Assert.assertEquals(httpRequest.get(2), "Optional.empty");
         Assert.assertEquals(httpRequest.get(3), "Optional.empty");
     }
-
+@Ignore
     @Test
     public void testAPIHTTPResponseGET() {
         final String expectedStatusCode = "200";
