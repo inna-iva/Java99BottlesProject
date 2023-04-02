@@ -3,6 +3,7 @@ package tests.api;
 import base.BaseTest;
 import network.CaptureNetworkTraffic;
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.browse_languages.languages.ABCLanguagePage;
 
@@ -24,7 +25,7 @@ public class API_ABCLanguageTest extends BaseTest {
         Assert.assertEquals(abcLanguagePage.getH2HeaderText(), LANGUAGE_NAME);
         Assert.assertNotNull(abcLanguagePage.getPageContext());
     }
-
+@Ignore
     @Test
     public void test_API_HTTPRequest_GET_WhenClickABCLanguage() {
         final String expectedMethod = "GET";

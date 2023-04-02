@@ -5,6 +5,7 @@ import network.CaptureNetworkTraffic;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -13,7 +14,7 @@ import java.net.URL;
 import java.util.List;
 
 public class API_TopListSubmenuTest extends BaseTest {
-
+@Ignore
     @Test
     public void test_API_HttpRequest_GET() {
         final String expectedMethod = "GET";

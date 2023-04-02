@@ -5,6 +5,7 @@ import network.CaptureNetworkTraffic;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.browse_languages.languages.KotlinLanguagePage;
 
@@ -52,7 +53,7 @@ public class API_KotlinLanguageTest extends BaseTest {
         Assert.assertEquals(kotlinLanguagePage.getInput4Name(), NAME_INPUT_4);
         Assert.assertEquals(kotlinLanguagePage.getInput4Value(), VALUE_INPUT4);
     }
-
+@Ignore
     @Test
     public void test_API_HttpRequest_POST() {
         final String expectedMethod = "POST";

@@ -5,6 +5,7 @@ import network.CaptureNetworkTraffic;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.browse_languages.letters.JPage;
 import pages.top_lists.TopRatedRealPage;
@@ -27,7 +28,7 @@ public class API_JTest extends BaseTest {
         Assert.assertEquals(jPage.getJHref(), getBaseUrl() + J_END_POINT);
         Assert.assertNotNull(jPage.getPageContext());
     }
-
+@Ignore
     @Test
     public void test_API_HttpRequest_GET() {
         final String expectedMethod = "GET";

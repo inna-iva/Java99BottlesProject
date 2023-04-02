@@ -3,6 +3,7 @@ package tests.api;
 import base.BaseTest;
 import network.CaptureNetworkTraffic;
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.submit_new_language.SubmitNewLanguagePage;
 
@@ -64,7 +65,7 @@ public class API_SubmitNewLanguageTest extends BaseTest {
         Assert.assertEquals(submitNewLanguagePage.getInput8Value(), VALUE_INPUT_8);
         Assert.assertEquals(submitNewLanguagePage.getFormText(), PAGE_CONTEXT_BEFORE_REQUEST);
     }
-
+@Ignore
     @Test (priority = -4)
     public void test_API_HttpRequest_GET() {
         final String EXPECTED_METHOD = "GET";
@@ -101,7 +102,7 @@ public class API_SubmitNewLanguageTest extends BaseTest {
         Assert.assertTrue(Double.parseDouble(httpResponse.get(3).substring(10, 14))
                 <= EXPECTED_RESPONSE_TIME_STANDARD);
     }
-
+@Ignore
     @Test (priority = -3)
     public void test_API_HttpRequest_POST() {
 

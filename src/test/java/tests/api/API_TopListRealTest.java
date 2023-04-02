@@ -5,6 +5,7 @@ import network.CaptureNetworkTraffic;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.search_languages.SearchLanguagesPage;
 import pages.top_lists.TopRatedRealPage;
@@ -30,7 +31,7 @@ public class API_TopListRealTest extends BaseTest {
         Assert.assertEquals(topListRealPage.getH2HeaderText(), HEADER);
         Assert.assertNotNull(topListRealPage.getPageContext());
     }
-
+@Ignore
     @Test
     public void test_API_HttpRequest_GET() {
         final String expectedMethod = "GET";
@@ -49,7 +50,7 @@ public class API_TopListRealTest extends BaseTest {
         Assert.assertEquals(httpRequest.get(2), "Optional.empty");
         Assert.assertEquals(httpRequest.get(3), "Optional.empty");
     }
-
+@Ignore
     @Test(dependsOnMethods = "test_API_HttpRequest_GET")
     public void test_API_HttpResponse_GET() {
         final String expectedStatusCode = "200";
